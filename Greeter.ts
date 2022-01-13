@@ -10,4 +10,4 @@ class Greeter {
 }
 const greeter = new Greeter("Hi! there");
 
-export { greeter };
+export { greeter, Greeter };
