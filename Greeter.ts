@@ -4,10 +4,11 @@ class Greeter {
     this.greeting = greeting;
   }
   greet(name: string) {
-    let result = this.greeting + ", " + name;
+    let result = `${this.greeting + ", " + name}`;
     return result;
   }
 }
 const greeter = new Greeter("Hi! there");
 
 export { greeter, Greeter };
+console.log(greeter.greeting);

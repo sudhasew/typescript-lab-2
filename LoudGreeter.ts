@@ -1,4 +1,5 @@
 import { Greeter } from "./Greeter";
+
 class LoudGreeter extends Greeter {
   private extra: string = "";
   addVolume(): void {
@@ -9,5 +10,7 @@ class LoudGreeter extends Greeter {
   }
 }
 const loudGreeter = new LoudGreeter("");
+
+loudGreeter.addVolume();
 
 export { loudGreeter, LoudGreeter };
