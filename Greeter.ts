@@ -10,4 +10,4 @@ export class Greeter {
 }
 const greeter = new Greeter("Hi! there");
 
-//console.log(greeter.greeting);
+console.log(greeter.greeting);
