@@ -1,12 +1,13 @@
 import { Greeter } from "./Greeter";
 
-class JavaScriptGreeter extends Greeter {
+export class JavaScriptGreeter extends Greeter {
   greet(name: string): string {
-    console.log("Hello, Grant!");
-    return "console.log('Hello, Grant!')";
+    let result = `console.log('${this.greeting}'!)`;
+    return result;
   }
 }
 
-const javaScriptGreeter = new JavaScriptGreeter("Hi");
+const javaScriptGreeter = new JavaScriptGreeter("`${greeting}, ${name}`");
+
 javaScriptGreeter.greet("");
-export { JavaScriptGreeter, javaScriptGreeter };
+// export { JavaScriptGreeter, javaScriptGreeter };

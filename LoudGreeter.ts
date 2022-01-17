@@ -1,16 +1,16 @@
 import { Greeter } from "./Greeter";
 
-class LoudGreeter extends Greeter {
-  private extra: string = "";
-  addVolume(): void {
-    this.extra = this.extra + "!";
-  }
+export class LoudGreeter extends Greeter {
+  extra: string = "!";
   greet(name: string): string {
-    return "Hello, Grant!!!" + this.extra;
+    return super.greet(name) + this.extra;
+  }
+  addVolume() {
+    this.extra = "!";
   }
 }
-const loudGreeter = new LoudGreeter("");
-
-loudGreeter.addVolume();
-
-export { loudGreeter, LoudGreeter };
+const loud = new LoudGreeter("Hi");
+loud.addVolume();
+loud.addVolume();
+// loudGreeter.addVolume();
+console.log(loud.greet("Hello"));

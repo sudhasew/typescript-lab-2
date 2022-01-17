@@ -1,15 +1,15 @@
 import { Greeter } from "./Greeter";
 class HtmlGreeter extends Greeter {
-  tagName: string;
-  constructor(greeting: string, tagName: string) {
+  //tagName: string;
+  constructor(greeting: string, public tagName: string = "h1") {
     super(greeting);
-    this.greeting = greeting;
-    this.tagName = "h1";
   }
-  greet() {
-    this.tagName = "hi";
-    return "<h1>Hello, Grant!</h1>";
+  greet(name: string): string {
+    return `<${this.tagName}>${super.greet(name)}</${this.tagName}>`;
   }
 }
-const htmlGreeter = new HtmlGreeter("Hello", "Sudha");
-export { htmlGreeter, HtmlGreeter };
+const htmlGreeter = new HtmlGreeter("Hello");
+htmlGreeter.greet("Sudha");
+export default HtmlGreeter;
+
+console.log(htmlGreeter.greet("Sudha"));

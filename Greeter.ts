@@ -1,14 +1,13 @@
-class Greeter {
+export class Greeter {
   greeting: string;
   constructor(greeting: string) {
     this.greeting = greeting;
   }
   greet(name: string) {
-    let result = `${this.greeting + ", " + name}`;
+    let result = `${this.greeting},${name}!`;
     return result;
   }
 }
 const greeter = new Greeter("Hi! there");
 
-export { greeter, Greeter };
-console.log(greeter.greeting);
+//console.log(greeter.greeting);
